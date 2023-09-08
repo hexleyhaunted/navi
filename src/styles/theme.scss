@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
+
+$primary-1-light: #545353;
+$primary-1-main: #313030;
+$primary-1-darker: #282727;
+$primary-1-dark: #1E1D1D;
+
+$primary-2-light: #F1ECEA;
+$primary-2-main: #E6D8D3;
+
+$accent-primary-main: #5CE1E6;
+
+$accent-error-main: #FF3131;
+
+@mixin title-font {
+  font-family: 'Neuton', serif;
+}
+
+@mixin body-font {
+  font-family: 'Nunito', sans-serif;
+}
+
+@mixin scroll-bar() {
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $accent-primary-main;
+    border-radius: 4px;
+  }
+}

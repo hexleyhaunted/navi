@@ -1,0 +1,13 @@
+@import "src/styles/theme";
+
+#footer-bar {
+  height: 52px;
+  min-height: 52px;
+  width: 100%;
+  background-color: $primary-1-dark;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 16px;
+  column-gap: 16px;
+}

@@ -1,0 +1,44 @@
+@import "./theme";
+@import "textures/patterns";
+@import "textures/textures";
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  color: $primary-2-main;
+  @include title-font;
+}
+
+#__next {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+body {
+  background-color: $primary-1-darker;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  @include inspiration-geometry-texture(0.6);
+}
+
+:root body * {
+  &.disabled {
+    color: $primary-1-light !important;
+    border-color: $primary-1-light !important;
+    transition: 1s cubic-bezier(.37, .64, .69, 1.02) !important;
+    .icon {
+      color: $primary-1-light !important;
+      transition: 1s cubic-bezier(.37, .64, .69, 1.02) !important;
+    }
+  }
+}
+
+h1,h2,h3,h4,h5,h6 {
+  @include title-font;
+}
+

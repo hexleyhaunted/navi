@@ -1,0 +1,10 @@
+@import "src/styles/theme";
+@import "src/styles/index";
+@import "src/styles/textures/textures";
+
+#parsed-panel {
+  width: 50%;
+  height: 100%;
+  background-color: $primary-1-main;
+  @include church-texture(0.1);
+}

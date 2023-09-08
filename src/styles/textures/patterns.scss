@@ -1,0 +1,25 @@
+@import "textures";
+
+@mixin green-gobbler-texture($opacity) {
+  @include texture("https://www.transparenttextures.com/patterns/green-gobbler.png", $opacity);
+}
+
+@mixin inspiration-geometry-texture($opacity) {
+  @include texture("https://www.transparenttextures.com/patterns/inspiration-geometry.png", $opacity);
+}
+
+@mixin kuji-texture($opacity) {
+  @include texture("https://www.transparenttextures.com/patterns/kuji.png", $opacity);
+}
+
+@mixin skulls-texture($opacity) {
+  @include texture("https://www.transparenttextures.com/patterns/skulls.png", $opacity);
+}
+
+@mixin tree-bark-texture($opacity) {
+  @include texture("https://www.transparenttextures.com/patterns/tree-bark.png", $opacity);
+}
+
+@mixin vichy-texture($opacity) {
+  @include texture("https://www.transparenttextures.com/patterns/vichy.png", $opacity);
+}

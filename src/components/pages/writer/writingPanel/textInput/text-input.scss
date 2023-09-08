@@ -1,0 +1,25 @@
+@import "src/styles/theme";
+@import "src/styles/resets";
+@import "src/styles/index";
+
+.text-input-wrapper {
+  background-color: $primary-2-light;
+  border-radius: 16px;
+  overflow: hidden;
+  padding: 8px 16px;
+
+  .scroll-wrapper {
+    @include scroll-bar();
+    overflow-y: auto;
+    height: fit-content;
+    max-width: 100%;
+    max-height: 100%;
+
+    .text-input {
+      @include reset-textarea;
+      @include body-font;
+      width: 100%;
+      overflow: hidden;
+    }
+  }
+}

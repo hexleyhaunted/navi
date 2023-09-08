@@ -1,0 +1,11 @@
+@import "src/styles/index";
+@import "src/styles/theme";
+
+#writer-content {
+  width: 100%;
+  max-width: 1600px;
+  height: 100%;
+  background-color: $primary-1-main;
+  margin: 0 auto;
+  display: flex;
+}

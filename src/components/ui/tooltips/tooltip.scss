@@ -1,0 +1,55 @@
+@import "src/styles/theme";
+@import "src/styles/index";
+
+.tooltip-wrapper {
+  position: relative;
+  z-index: 100;
+
+  &.visible .tooltip {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .tooltip {
+    position: absolute;
+    background-color: $primary-1-dark;
+    padding: 12px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    opacity: 0;
+    transform: translateY(-5%);
+    transition: 0.5s cubic-bezier(.52,-0.8,.42,1.89);
+    min-width: 170px;
+
+    p {
+      @include body-font;
+      letter-spacing: 2px;
+      font-size: 12px;
+    }
+
+    &.top-left-anchor-up-right-direction {
+      left: 0;
+      bottom: 130%;
+    }
+
+    &.top-right-anchor-up-left-direction {
+      bottom: 130%;
+      right: 0;
+    }
+
+  }
+}
+
+@keyframes slide-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-10%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,122 @@
+@import "/src/styles/theme";
+
+.outlined-button.button {
+  position: relative;
+  z-index: 100;
+  outline: 2px solid;
+  font-weight: 700;
+  transition: 0.2s ease-out;
+
+  .icon {
+    transition: 0.2s ease-out;
+  }
+
+  &.button-style-primary {
+    outline-color: $accent-primary-main;
+    color: $accent-primary-main;
+    .icon {
+      color: $accent-primary-main;
+    }
+    &:hover {
+      background-color: $accent-primary-main;
+    }
+  }
+
+  &.button-style-error {
+    outline-color: $accent-error-main;
+    color: $accent-error-main;
+    .icon {
+      color: $accent-error-main;
+    }
+    &:hover {
+      background-color: $accent-error-main;
+    }
+  }
+
+  &.animating {
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 8px;
+      z-index: -1000;
+    }
+  }
+
+  &:hover {
+    color: $primary-1-dark;
+    transition: 0.2s ease-out;
+    .icon {
+      transition: 0.2s ease-out;
+      color: $primary-1-dark;
+    }
+
+    &:active {
+      outline-color: $primary-2-light;
+      background-color: $primary-2-light;
+      color: $primary-1-dark;
+      .icon {
+        transition: 0.02s ease-out;
+      }
+      transition: 0.02s ease-out;
+    }
+  }
+
+  &.disabled {
+    &:hover {
+      background-color: transparent;
+    }
+    &.animating {
+      &::after {
+        content: "";
+        display: none;
+      }
+    }
+  }
+
+}
+
+.outlined-button.text-button {
+  font-size: 1rem;
+  border-radius: 8px;
+  padding: 8px 16px;
+  &::after {
+    width: 97%;
+    height: 90%;
+    animation: pulse-text-button 0.4s cubic-bezier(0,0,.26,1.01);
+  }
+}
+
+.outlined-button.icon-button {
+  font-size: 1rem;
+  border-radius: 50%;
+  padding: 8px;
+  &::after {
+    width: 90%;
+    height: 90%;
+    animation: pulse-icon-button 0.4s cubic-bezier(0,0,.26,1.01);
+  }
+}
+
+@keyframes pulse-text-button {
+  0% {
+    outline: 2px solid rgba($primary-2-light, 1);
+  }
+  100% {
+    outline: 13px solid rgba($primary-2-light, 0);
+    border-radius: 2px;
+  }
+}
+
+@keyframes pulse-icon-button {
+  0% {
+    outline: 2px solid rgba($primary-2-light, 1);
+    border-radius: 50%;
+  }
+  100% {
+    outline: 13px solid rgba($primary-2-light, 0);
+    border-radius: 50%;
+  }
+}

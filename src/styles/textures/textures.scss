@@ -1,0 +1,37 @@
+@import "index";
+
+@mixin asfalt-light-texture($opacity) {
+  @include texture("https://www.transparenttextures.com/patterns/asfalt-light.png", $opacity);
+}
+
+@mixin asfalt-dark-texture($opacity) {
+  @include texture("https://www.transparenttextures.com/patterns/asfalt-dark.png", $opacity);
+}
+
+@mixin cardboard-flat-texture($opacity) {
+  @include texture("https://www.transparenttextures.com/patterns/cardboard-flat.png", $opacity);
+}
+
+@mixin church-texture($opacity) {
+  @include texture("https://www.transparenttextures.com/patterns/church.png", $opacity);
+}
+
+@mixin cloth-alike-texture($opacity) {
+  @include texture("https://www.transparenttextures.com/patterns/cloth-alike.png", $opacity);
+}
+
+@mixin fabric-of-squares-texture($opacity) {
+  @include texture("https://www.transparenttextures.com/patterns/fabric-of-squares.png", $opacity);
+}
+
+@mixin groove-paper-texture($opacity) {
+  @include texture("https://www.transparenttextures.com/patterns/groovepaper.png", $opacity);
+}
+
+@mixin noisy-texture($opacity) {
+  @include texture("https://www.transparenttextures.com/patterns/noisy.png", $opacity);
+}
+
+@mixin old-wall-texture($opacity) {
+  @include texture("https://www.transparenttextures.com/patterns/old-wall.png", $opacity);
+}
